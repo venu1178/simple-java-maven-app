@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
     environment {
         PROJECT_ID = 'fsi-retailbanking-dev'
@@ -20,12 +20,9 @@ pipeline {
             }
         }
     }
-}
+}*/
 
-
-
-
-/*pipeline {
+pipeline {
     agent any
     stages {
         stage('Deploy') {
@@ -42,4 +39,4 @@ pipeline {
             }
         }
     }
-}*/
+}
