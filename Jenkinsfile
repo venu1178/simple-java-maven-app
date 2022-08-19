@@ -22,7 +22,7 @@
     }
 }*/
 
-pipeline {
+/*pipeline {
     agent any
     stages {
         stage('Deploy') {
@@ -39,4 +39,19 @@ pipeline {
             }
         }
     }
-}
+}*/
+
+  tools {
+   jdk 'jdk-11'
+   maven 'mvn-3.6.3'
+  }
+
+  stages {
+   stage('Build') {
+    steps {
+     withMaven(maven : 'mvn-3.6.3') {
+      sh "mvn package"
+     }
+    }
+   }
+
