@@ -49,8 +49,8 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                withMaven(maven : 'mvn-3.6.3') {
-                    sh "mvn package"
+                container('maven') {
+                  sh "mvn -B clean deploy"
                 }
             }
         }
