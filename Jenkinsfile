@@ -3,7 +3,6 @@ pipeline {
     kubernetes {
       // Without cloud, Jenkins will pick the first cloud in the list
       cloud "kubernetes"
-      label "jenkins"
       yamlFile "jenkins/jenkins-build-pod.yaml"
     }
   }
