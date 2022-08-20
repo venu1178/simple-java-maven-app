@@ -2,7 +2,7 @@ pipeline {
   agent {
     kubernetes {
       // Without cloud, Jenkins will pick the first cloud in the list
-      cloud "ordermanagment-cluster"
+      cloud "kubernetes"
       yamlFile "jenkins/jenkins-build-pod.yaml"
     }
   }
